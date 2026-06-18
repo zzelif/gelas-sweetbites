@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="26 21 46 33" width="100%" height="100%">
+  <!-- Bowl Outer Outline -->
+  <path d="M37.5,24.5 C37.5,23.5 38.5,22.5 40,22.5 L60,22.5 C61.5,22.5 62.5,23.5 62.5,24.5 M37.5,24.5 L62.5,24.5 C62.5,24.5 70,24.5 70,26 C70,41.5 59,42.5 50,42.5 C41,42.5 30,41.5 30,26 C30,24.5 37.5,24.5 37.5,24.5 Z" 
+        fill="#FFFFFF" stroke="#2D1E24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Bowl Inside Rim Shadow -->
+  <path d="M30.5,26.5 C35,28 65,28 69.5,26.5" 
+        fill="none" stroke="#2D1E24" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- Whisk loops (left side, overlapping wires) -->
+  <!-- Loop 1 (outer) -->
+  <path d="M39.5,41 C37.5,41.5 35.5,42 33.5,42.5 C26,44.5 26,49.5 33.5,51.5 C35.5,52 37.5,52.5 39.5,53" 
+        fill="none" stroke="#2D1E24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Loop 2 (middle) -->
+  <path d="M39.5,42.5 C38,43 36.5,43.5 35,44 C28.5,45.5 28.5,48.5 35,50 C36.5,50.5 38,51 39.5,51.5" 
+        fill="none" stroke="#2D1E24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Loop 3 (center wire) -->
+  <line x1="28.5" y1="47" x2="39.5" y2="47" 
+        stroke="#2D1E24" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Whisk Collar / Connection -->
+  <rect x="39.5" y="43" width="3" height="8" rx="1.5" 
+        fill="#FFFFFF" stroke="#2D1E24" stroke-width="1.8"/>
+
+  <!-- Whisk Handle (right side, extending under the bowl) -->
+  <path d="M42.5,47 L53,47 C55,47 57.5,45.5 57.5,47 C57.5,48.5 55,50 53,50 L42.5,50" 
+        fill="#FFFFFF" stroke="#2D1E24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

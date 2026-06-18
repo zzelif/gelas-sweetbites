@@ -35,7 +35,7 @@ Warm closing, footer links, and Facebook icon linked to their page
 
 ### Tokens
 
-``css
+```css
 :root {
   --color-primary: #E5989B;     /*Elegant Rose Pink*/
   --color-primary-hover: #D87F82;
@@ -54,7 +54,7 @@ Warm closing, footer links, and Facebook icon linked to their page
   --shadow-soft: 0 10px 30px rgba(60, 47, 47, 0.06);
   --shadow-hover: 0 20px 40px rgba(229, 152, 155, 0.15);
 }
-``
+```
 
 - Custom typography layout leveraging Google Fonts.
 - Pure CSS animations for loading states, fade-ins, and button hover states.

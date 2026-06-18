@@ -35,8 +35,8 @@
   --shadow-modal: 0 25px 60px rgba(60, 47, 47, 0.12);
   --shadow-button: 0 8px 20px rgba(229, 152, 155, 0.25);
   
-  --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  --transition-fast: all 0.2s ease;
+  --transition-smooth: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  --transition-fast: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
 /* ==========================================================================
@@ -51,6 +51,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -59,6 +61,7 @@ body {
   color: var(--color-text);
   line-height: 1.7;
   overflow-x: hidden;
+  max-width: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -213,6 +216,12 @@ img {
   align-items: center;
   justify-content: center;
   border: 1px solid var(--color-primary);
+}
+
+.logo-svg-img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 
 .logo-text {
@@ -577,9 +586,10 @@ img {
 
 .showcase-grid {
   display: none;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 40px;
-  animation: fadeTransition 0.5s forwards ease;
+  animation: fadeTransition 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: opacity, transform;
 }
 
 .showcase-grid.active {
@@ -719,7 +729,7 @@ img {
 
 .reviews-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   position: relative;
   z-index: 1;
@@ -957,6 +967,8 @@ img {
 .form-group input,
 .form-group select,
 .form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
   font-family: var(--font-body);
   font-size: 0.9rem;
   padding: 14px 16px;
@@ -964,7 +976,8 @@ img {
   border: 1px solid var(--color-border);
   background-color: var(--color-background);
   color: var(--color-text);
-  transition: var(--transition-fast);
+  transition: border-color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), background-color 0.2s ease, box-shadow 0.2s ease;
+  will-change: border-color, background-color, box-shadow;
 }
 
 .form-group input:focus,
@@ -1178,16 +1191,20 @@ img {
   width: 100%;
   height: 100%;
   z-index: 2000;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity, visibility;
 }
 
 .modal.active {
-  display: flex;
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .modal-backdrop {
@@ -1196,9 +1213,9 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(60, 47, 47, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(45, 34, 34, 0.6);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 
 .modal-content-wrapper {
@@ -1208,8 +1225,11 @@ img {
   max-width: 800px;
   max-height: 90vh;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   transform: scale(0.92);
-  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform, opacity;
   background-color: var(--color-surface);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-modal);
@@ -1254,7 +1274,8 @@ img {
   font-size: 1.1rem;
   cursor: pointer;
   z-index: 10;
-  transition: var(--transition-fast);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  will-change: transform;
 }
 
 .modal-close-btn:hover {
@@ -1516,8 +1537,13 @@ img {
   }
 }
 
-/* Mobile Configurations */
+/* Mobile Configurations (max-width: 768px) */
 @media (max-width: 768px) {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .main-header {
     height: 70px;
   }
@@ -1525,10 +1551,11 @@ img {
   .hero-section {
     padding-top: 110px;
     padding-bottom: 60px;
+    overflow: hidden;
   }
 
   .hero-title {
-    font-size: 2.8rem;
+    font-size: clamp(2.2rem, 7vw, 3.2rem);
   }
 
   .brand-tagline {
@@ -1554,8 +1581,9 @@ img {
     box-shadow: 0 10px 20px rgba(60, 47, 47, 0.05);
     transform: translateY(-110%);
     opacity: 0;
-    transition: var(--transition-smooth);
+    transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.35s ease;
     pointer-events: none;
+    will-change: transform, opacity;
   }
 
   .nav-links.active {
@@ -1565,12 +1593,17 @@ img {
   }
 
   .header-cta {
-    display: none; /* Hide button on mobile, custom inquiry flow is accessible */
+    display: none;
   }
 
   .form-row {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 16px;
+    margin-bottom: 0; /* gap handles vertical spacing */
+  }
+
+  .form-group {
+    margin-bottom: 16px;
   }
 
   .modal-grid {
@@ -1583,15 +1616,16 @@ img {
   }
 
   .modal-card {
-    padding: 24px;
+    padding: 28px 20px;
   }
 
   .inquiry-card {
-    padding: 24px;
+    padding: 28px 20px;
   }
 
   .footer-container {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
   
   .footer-brand {
@@ -1599,30 +1633,70 @@ img {
   }
 }
 
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 2.2rem;
+/* Compact & Modern Mobile Devices (max-width: 576px) */
+@media (max-width: 576px) {
+  .container {
+    padding: 0 16px;
   }
 
   .hero-actions {
     flex-direction: column;
     width: 100%;
+    gap: 12px;
+    margin-bottom: 36px;
   }
 
   .hero-actions .btn {
     width: 100%;
   }
 
-  .hero-floating-badge {
-    display: none; /* Hide badges on very small screens to avoid overflow */
+  .social-proof-badge {
+    padding: 10px 16px;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .social-proof-text span {
+    font-size: 0.78rem;
   }
 
   .section-title {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+  }
+
+  .hero-floating-badge {
+    display: none; /* Hide badges on very small screens to avoid overflow */
+  }
+}
+
+/* Extra Compact Phones (max-width: 400px) */
+@media (max-width: 400px) {
+  .logo-title {
+    font-size: 1.15rem;
+  }
+
+  .logo-subtitle {
+    font-size: 0.6rem;
+  }
+
+  .inquiry-card {
+    padding: 20px 14px;
+  }
+
+  .inquiry-card::before {
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
   }
 
   .tab-btn {
-    padding: 10px 18px;
-    font-size: 0.75rem;
+    padding: 10px 14px;
+    font-size: 0.7rem;
+    gap: 4px;
   }
 }
+

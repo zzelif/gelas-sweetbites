@@ -13,7 +13,7 @@ const productData = {
     tag: 'Signature',
     ingredients: 'Premium local cocoa, high-grade dark chocolate, fresh butter, refined flour, cane sugar, farm eggs, chocolate ganache filling.',
     sizing: 'Serves 6-8 people. Dimensions: 6" diameter, 3" height.',
-    img: 'images/chocolate_cake.png',
+    img: 'images/products/chocolate_cake.png',
     optionValue: 'Moist Chocolate Custom Cake'
   },
   'cake-mocha': {
@@ -23,7 +23,7 @@ const productData = {
     tag: 'Signature',
     ingredients: 'Espresso coffee infusion, local cocoa powder, dairy buttercream, wheat flour, organic sugar, fresh eggs.',
     sizing: 'Serves 6-8 people. Dimensions: 6" diameter, 3" height.',
-    img: 'images/mocha_cake.png',
+    img: 'images/products/mocha_cake.png',
     optionValue: 'Moist Mocha Custom Cake'
   },
   'cake-strawberry': {
@@ -43,7 +43,7 @@ const productData = {
     tag: 'Bestseller',
     ingredients: 'Semi-sweet dark chocolate chunks, brown butter, refined flour, brown sugar, farm eggs, sea salt flakes.',
     sizing: 'Individual giant cookie (approx. 100 grams). Box of 6 and 12 available.',
-    img: 'images/gooey_cookies.png',
+    img: 'images/products/gooey_cookies.png',
     optionValue: 'Gooey Cookies Selection'
   },
   'cookie-redvelvet': {
@@ -53,7 +53,7 @@ const productData = {
     tag: 'Popular',
     ingredients: 'Dutch processed cocoa, premium cream cheese filling, sugar, flour, butter, white chocolate chips.',
     sizing: 'Individual giant cookie (approx. 100 grams).',
-    img: 'images/gooey_cookies.png',
+    img: 'images/products/gooey_cookies.png',
     optionValue: 'Gooey Cookies Selection'
   },
   'cookie-doublechoc': {
@@ -63,7 +63,7 @@ const productData = {
     tag: 'New',
     ingredients: 'Unsweetened cocoa powder, dark chocolate chips, milk chocolate chips, butter, cane sugar, wheat flour.',
     sizing: 'Individual giant cookie (approx. 100 grams).',
-    img: 'images/gooey_cookies.png',
+    img: 'images/products/gooey_cookies.png',
     optionValue: 'Gooey Cookies Selection'
   },
   'brownie-classic': {
@@ -73,7 +73,7 @@ const productData = {
     tag: 'Bestseller',
     ingredients: 'Local premium cocoa paste (tablea), unsalted butter, organic sugar, eggs, pastry flour.',
     sizing: 'Box of 6 square bakes (approx. 2.5" x 2.5" each). Also available in Box of 12 for ₱650.00.',
-    img: 'images/fudgy_brownies.png',
+    img: 'images/products/fudgy_brownies.png',
     optionValue: 'Fudgy Brownies Selection'
   },
   'brownie-caramel': {
@@ -83,7 +83,7 @@ const productData = {
     tag: 'Premium',
     ingredients: 'Local cocoa paste, cream, house-made butter caramel sauce, rock salt, flour, eggs, sugar.',
     sizing: 'Box of 6 square bakes (approx. 2.5" x 2.5" each).',
-    img: 'images/fudgy_brownies.png',
+    img: 'images/products/fudgy_brownies.png',
     optionValue: 'Fudgy Brownies Selection'
   },
   'bread-cinnamon': {
@@ -93,7 +93,7 @@ const productData = {
     tag: 'Hot & Fresh',
     ingredients: 'Cinnamon bark powder, brown sugar, sweet milk yeast dough, butter, cream cheese glaze.',
     sizing: 'Box of 4 large soft cinnamon rolls.',
-    img: 'images/cinnamon_rolls.png',
+    img: 'images/products/cinnamon_rolls.png',
     optionValue: 'Artisanal Breads Selection'
   },
   'bread-brioche': {
@@ -103,7 +103,7 @@ const productData = {
     tag: 'Artisanal',
     ingredients: 'High-fat dairy butter, cheddar cheese, yeast bread flour, fresh eggs, honey.',
     sizing: 'Single standard loaf (serves 4-5).',
-    img: 'images/cinnamon_rolls.png',
+    img: 'images/products/cinnamon_rolls.png',
     optionValue: 'Artisanal Breads Selection'
   }
 };
