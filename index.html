@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gela's Sweet Bites - Elegant Artisanal Pastries in Antipolo</title>
+  <meta name="description" content="Indulge in artisanal cakes, gooey cookies, fudgy brownies, and fresh breads from Gela's Sweet Bites. Proudly baking in Antipolo City and delivering across Rizal and Metro Manila.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playball&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <div class="logo-circle">
+          <svg class="logo-svg" viewBox="0 0 100 100" width="40" height="40">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M30,45 C30,65 70,65 70,45" fill="none" stroke="currentColor" stroke-width="3"/>
+            <line x1="50" y1="60" x2="50" y2="75" stroke="currentColor" stroke-width="3"/>
+            <path d="M40,75 L60,75" stroke="currentColor" stroke-width="3"/>
+            <path d="M45,35 L50,20 L55,35 Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">Gela's Sweet Bites</span>
+          <span class="logo-subtitle">Est. 2020</span>
+        </div>
+      </div>
+      
+      <nav class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#menu">Our Menu</a>
+        <a href="#community">Community</a>
+        <a href="#inquiry">Custom Orders</a>
+      </nav>
+      
+      <div class="header-cta">
+        <a href="#inquiry" class="btn btn-primary btn-sm">Order Inquiry</a>
+      </div>
+      
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-watercolor-bg"></div>
+    <div class="container hero-container">
+      <div class="hero-text-content">
+        <div class="brand-tagline">Baking smiles, one bite at a time...</div>
+        <h1 class="hero-title">Artisanal Delights <br>Crafted With Love</h1>
+        <p class="hero-description">
+          Treat yourself to our signature custom cakes, giant gooey cookies, rich fudgy brownies, and soft, freshly-baked breads. Proudly home-baked in <strong>Antipolo City</strong> (near Robinsons Place) and delivering sweet moments across Rizal and Metro Manila.
+        </p>
+        
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary btn-lg">Explore Our Menu</a>
+          <a href="https://www.facebook.com/gelassweetbites/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+            <i class="fa-brands fa-facebook-messenger"></i> Chat to Order
+          </a>
+        </div>
+        
+        <div class="social-proof-badge">
+          <div class="fb-avatar-stack">
+            <span class="fb-avatar" style="background-color: #E5989B;">G</span>
+            <span class="fb-avatar" style="background-color: #D4AF37;">S</span>
+            <span class="fb-avatar" style="background-color: #3C2F2F; color: #FCF8F6;">B</span>
+          </div>
+          <div class="social-proof-text">
+            <div class="rating-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <span>Join <strong>1.7k+ followers</strong> on <a href="https://www.facebook.com/gelassweetbites/" target="_blank" rel="noopener noreferrer">Facebook</a></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="hero-image-frame">
+          <img src="images/bakery_hero.png" alt="Gela's Sweet Bites assortment: custom chocolate cake, brownies, and cookies" class="hero-img">
+          <div class="hero-floating-badge badge-top">
+            <span class="script-badge">Artisanal</span>
+          </div>
+          <div class="hero-floating-badge badge-bottom">
+            <span class="bold-badge">₱750 Cakes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Tabbed Product Showcase -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tagline">Indulge Yourself</span>
+        <h2 class="section-title">Our Sweet Creations</h2>
+        <div class="divider"><i class="fa-solid fa-leaf"></i></div>
+      </div>
+      
+      <!-- Tab Controls -->
+      <div class="tab-controls">
+        <button class="tab-btn active" data-tab="cakes">
+          <i class="fa-solid fa-cake-candles"></i> Signature Cakes
+        </button>
+        <button class="tab-btn" data-tab="cookies">
+          <i class="fa-solid fa-cookie"></i> Gooey Cookies
+        </button>
+        <button class="tab-btn" data-tab="brownies">
+          <i class="fa-solid fa-cookie-bite"></i> Fudgy Brownies
+        </button>
+        <button class="tab-btn" data-tab="breads">
+          <i class="fa-solid fa-bread-slice"></i> Artisanal Breads
+        </button>
+      </div>
+      
+      <!-- Tab Content Showcase -->
+      <div class="showcase-grid-wrapper">
+        
+        <!-- Cakes Tab Content -->
+        <div class="showcase-grid active" id="tab-cakes">
+          <!-- Card 1 -->
+          <div class="product-card" data-product-id="cake-chocolate">
+            <div class="product-img-container">
+              <img src="images/chocolate_cake.png" alt="Moist Chocolate Christmas Cake" class="product-img">
+              <span class="product-tag">Signature</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Moist Chocolate Custom Cake</h3>
+              <p class="product-desc">Decadent 6x3 moist chocolate cake filled with premium chocolate ganache and decorated with beautiful custom piping.</p>
+              <div class="product-footer">
+                <span class="product-price">₱750.00</span>
+                <button class="btn btn-primary btn-outline btn-sm view-details-btn">Details</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="product-card" data-product-id="cake-mocha">
+            <div class="product-img-container">
+              <img src="images/mocha_cake.png" alt="Moist Mocha Christmas Cake" class="product-img">
+              <span class="product-tag">Signature</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Moist Mocha Custom Cake</h3>
+              <p class="product-desc">Rich 6x3 moist mocha sponge cake with velvety mocha ganache filling, decorated elegantly with festive green piping.</p>
+              <div class="product-footer">
+                <span class="product-price">₱750.00</span>
+                <button class="btn btn-primary btn-outline btn-sm view-details-btn">Details</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="product-card" data-product-id="cake-strawberry">
+            <div class="product-img-container">
+              <img src="images/bakery_hero.png" alt="Strawberry Shortcake" class="product-img">
+              <span class="product-tag">Premium</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Classic Strawberry Shortcake</h3>
+              <p class="product-desc">Light, fluffy vanilla sponge layered with fresh Benguet strawberries and whipped dairy cream. Subtly sweet.</p>
+              <div class="product-footer">
+                <span class="product-price">₱850.00</span>
+                <button class="btn btn-primary btn-outline btn-sm view-details-btn">Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Cookies Tab Content -->
+        <div class="showcase-grid" id="tab-cookies">
+          <!-- Card 1 -->
+          <div class="product-card" data-product-id="cookie-chocochip">
+            <div class="product-img-container">
+              <img src="images/gooey_cookies.png" alt="Gooey Chocolate Chip Cookie" class="product-img">
+              <span class="product-tag">Bestseller</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Gooey Chocolate Chip Cookie</h3>
+              <p class="product-desc">Giant, warm-baked cookie loaded with molten dark chocolate chunks and topped with a pinch of flaky sea salt.</p>
+              <div class="product-footer">
+                <span class="product-price">₱80.00 <small>/ pc</small></span>
+                <button class="btn btn-primary btn-outline btn-sm view-details-btn">Details</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="product-card" data-product-id="cookie-redvelvet">
+            <div class="product-img-container">
+              <img src="images/gooey_cookies.png" alt="Red Velvet Cream Cheese Cookie" class="product-img">
+              <span class="product-tag">Popular</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Red Velvet Cream Cheese Cookie</h3>
+              <p class="product-desc">Rich red velvet cocoa base filled with a sweet and tangy cream cheese center, baked to gooey perfection.</p>
+              <div class="product-footer">
+                <span class="product-price">₱90.00 <small>/ pc</small></span>
+                <button class="btn btn-primary btn-outline btn-sm view-details-btn">Details</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="product-card" data-product-id="cookie-doublechoc">
+            <div class="product-img-container">
+              <img src="images/gooey_cookies.png" alt="Double Chocolate Fudge Cookie" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Double Chocolate Fudge Cookie</h3>
+              <p class="product-desc">Soft-baked, rich double chocolate cookie with melting chocolate chips and a dense brownie-like center.</p>
+              <div class="product-footer">
+                <span class="product-price">₱80.00 <small>/ pc</small></span>
+                <button class="btn btn-primary btn-outline btn-sm view-details-btn">Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Brownies Tab Content -->
+        <div class="showcase-grid" id="tab-brownies">
+          <!-- Card 1 -->
+          <div class="product-card" data-product-id="brownie-classic">
+            <div class="product-img-container">
+              <img src="images/fudgy_brownies.png" alt="Fudgy Chocolate Brownies" class="product-img">
+              <span class="product-tag">Bestseller</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Fudgy Chocolate Brownie Box</h3>
+              <p class="product-desc">Super chewy, fudgy chocolate brownies made with premium local cocoa, featuring a glossy crinkled crust.</p>
+              <div class="product-footer">
+                <span class="product-price">₱350.00 <small>(Box of 6)</small></span>
+                <button class="btn btn-primary btn-outline btn-sm view-details-btn">Details</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="product-card" data-product-id="brownie-caramel">
+            <div class="product-img-container">
+              <img src="images/fudgy_brownies.png" alt="Salted Caramel Brownies" class="product-img">
+              <span class="product-tag">Premium</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Salted Caramel Brownie Box</h3>
+              <p class="product-desc">Our classic fudgy brownie base marbled with house-made creamy salted caramel sauce and a touch of sea salt.</p>
+              <div class="product-footer">
+                <span class="product-price">₱380.00 <small>(Box of 6)</small></span>
+                <button class="btn btn-primary btn-outline btn-sm view-details-btn">Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Breads Tab Content -->
+        <div class="showcase-grid" id="tab-breads">
+          <!-- Card 1 -->
+          <div class="product-card" data-product-id="bread-cinnamon">
+            <div class="product-img-container">
+              <img src="images/cinnamon_rolls.png" alt="Soft Cinnamon Rolls" class="product-img">
+              <span class="product-tag">Hot & Fresh</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Glazed Cinnamon Rolls</h3>
+              <p class="product-desc">Spiced cinnamon brown sugar swirled in soft milk bread rolls, smothered in a decadent cream cheese glaze.</p>
+              <div class="product-footer">
+                <span class="product-price">₱300.00 <small>(Box of 4)</small></span>
+                <button class="btn btn-primary btn-outline btn-sm view-details-btn">Details</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="product-card" data-product-id="bread-brioche">
+            <div class="product-img-container">
+              <img src="images/cinnamon_rolls.png" alt="Cheesy Brioche Loaf" class="product-img">
+              <span class="product-tag">Artisanal</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Cheesy Brioche Bread</h3>
+              <p class="product-desc">Rich, buttery brioche loaf loaded with shredded cheddar cheese inside and baked with a crispy cheese crust.</p>
+              <div class="product-footer">
+                <span class="product-price">₱180.00 <small>/ loaf</small></span>
+                <button class="btn btn-primary btn-outline btn-sm view-details-btn">Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Facebook Community & Reviews Wall -->
+  <section id="community" class="community-section">
+    <div class="community-watercolor-bg"></div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tagline">Our Sweet Community</span>
+        <h2 class="section-title">Loved by 1.7k+ Followers</h2>
+        <div class="divider"><i class="fa-solid fa-heart"></i></div>
+      </div>
+      
+      <!-- Testimonial Grid -->
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar" style="background-color: #E5989B;">MC</div>
+              <div>
+                <h4 class="reviewer-name">Maria Cristina L.</h4>
+                <span class="review-date">Antipolo City • Recommended</span>
+              </div>
+            </div>
+            <div class="facebook-badge">
+              <i class="fa-brands fa-facebook"></i>
+            </div>
+          </div>
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">
+            "We ordered the Moist Chocolate Christmas Cake for our family dinner and everyone loved it! It was so moist, chocolatey, and not overly sweet. Ordering near Robinsons Place was so convenient. Will order again!"
+          </p>
+        </div>
+        
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar" style="background-color: #D4AF37;">JV</div>
+              <div>
+                <h4 class="reviewer-name">John Vincent D.</h4>
+                <span class="review-date">Cainta, Rizal • Recommended</span>
+              </div>
+            </div>
+            <div class="facebook-badge">
+              <i class="fa-brands fa-facebook"></i>
+            </div>
+          </div>
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">
+            "Those Gooey Chocolate Chip cookies are absolutely heaven! I bought a box of 6 and they were gone in minutes. Best paired with hot milk. Support local bakers, they do it best!"
+          </p>
+        </div>
+        
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar" style="background-color: #3C2F2F; color: #fff;">SA</div>
+              <div>
+                <h4 class="reviewer-name">Sarah A.</h4>
+                <span class="review-date">Pasig City • Recommended</span>
+              </div>
+            </div>
+            <div class="facebook-badge">
+              <i class="fa-brands fa-facebook"></i>
+            </div>
+          </div>
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">
+            "Excellent customer service! Gela custom-designed a birthday mocha cake for my mom with very short notice. Delivered safely to Pasig. Highly recommended pastry shop!"
+          </p>
+        </div>
+      </div>
+      
+      <!-- Facebook Call to Action -->
+      <div class="community-cta">
+        <p>Want to see more fresh bakes and reviews? Connect with us on social media!</p>
+        <a href="https://www.facebook.com/gelassweetbites/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <i class="fa-brands fa-facebook"></i> Visit Gela's Sweet Bites on Facebook
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Order Inquiry Form Section -->
+  <section id="inquiry" class="inquiry-section">
+    <div class="container">
+      <div class="inquiry-grid">
+        <!-- Text details -->
+        <div class="inquiry-details">
+          <span class="section-tagline">Handcrafted for You</span>
+          <h2 class="section-title">Request a Custom Creation</h2>
+          <p class="inquiry-intro-text">
+            Planning a birthday, anniversary, or a special holiday gathering? Gela customizes cakes, cupcakes, and bulk boxes of cookies and brownies to fit your theme.
+          </p>
+          
+          <ul class="inquiry-bullets">
+            <li>
+              <div class="bullet-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="bullet-content">
+                <strong>Pickup Location:</strong> Antipolo City, close to Robinsons Place.
+              </div>
+            </li>
+            <li>
+              <div class="bullet-icon"><i class="fa-solid fa-truck"></i></div>
+              <div class="bullet-content">
+                <strong>Delivery Areas:</strong> Anywhere in Antipolo City, nearby Rizal municipalities, and NCR areas.
+              </div>
+            </li>
+            <li>
+              <div class="bullet-icon"><i class="fa-solid fa-calendar-days"></i></div>
+              <div class="bullet-content">
+                <strong>Lead Time:</strong> Please submit requests 3-5 days in advance for custom cakes.
+              </div>
+            </li>
+          </ul>
+          
+          <div class="fb-alternative-box">
+            <p><strong>Prefer to chat directly?</strong></p>
+            <p>Skip the form and message Gela directly on Facebook Messenger. She is happy to discuss your design idea and send custom pricing.</p>
+            <a href="https://www.facebook.com/gelassweetbites/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-outline btn-md">
+              <i class="fa-brands fa-facebook-messenger"></i> Open Messenger Chat
+            </a>
+          </div>
+        </div>
+        
+        <!-- Form -->
+        <div class="inquiry-card">
+          <h3 class="form-card-title">Send Order Inquiry</h3>
+          <p class="form-card-subtitle">Fill in your request and we'll connect with you on Facebook or Email.</p>
+          
+          <form id="order-inquiry-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="user-name">Your Full Name*</label>
+                <input type="text" id="user-name" name="name" placeholder="Juan dela Cruz" required>
+                <span class="error-msg">Please enter your name.</span>
+              </div>
+              
+              <div class="form-group">
+                <label for="user-fb">Facebook Profile Name/Link*</label>
+                <input type="text" id="user-fb" name="facebook" placeholder="fb.com/username or Profile Name" required>
+                <span class="error-msg">We need this to contact you on Facebook.</span>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="user-email">Email Address</label>
+                <input type="email" id="user-email" name="email" placeholder="juan@gmail.com">
+                <span class="error-msg">Please enter a valid email address.</span>
+              </div>
+              
+              <div class="form-group">
+                <label for="user-phone">Phone Number*</label>
+                <input type="tel" id="user-phone" name="phone" placeholder="0917XXXXXXX" required>
+                <span class="error-msg">Please enter a valid mobile number.</span>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="order-selection">Sweet Selection*</label>
+                <select id="order-selection" name="selection" required>
+                  <option value="" disabled selected>-- Select a creation --</option>
+                  <option value="Moist Chocolate Custom Cake">Moist Chocolate Custom Cake (₱750.00)</option>
+                  <option value="Moist Mocha Custom Cake">Moist Mocha Custom Cake (₱750.00)</option>
+                  <option value="Classic Strawberry Shortcake">Classic Strawberry Shortcake (₱850.00)</option>
+                  <option value="Gooey Cookies Selection">Gooey Cookies (Box order)</option>
+                  <option value="Fudgy Brownies Selection">Fudgy Brownies (Box order)</option>
+                  <option value="Artisanal Breads Selection">Artisanal Breads</option>
+                  <option value="Custom Cake / Design Request">Custom Cake Design (Provide details below)</option>
+                </select>
+                <span class="error-msg">Please select a treat.</span>
+              </div>
+              
+              <div class="form-group">
+                <label for="order-date">Date Needed*</label>
+                <input type="date" id="order-date" name="date" required>
+                <span class="error-msg">Please select a delivery/pickup date.</span>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="order-details">Customization Details (Flavors, design, lettering, or quantity)*</label>
+              <textarea id="order-details" name="details" rows="4" placeholder="Describe your request: e.g. Lettering: 'Happy Birthday Mom!', delivery to Cainta, or custom cookie quantities..." required></textarea>
+              <span class="error-msg">Please share details of your order.</span>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+              <span class="btn-text">Submit Request</span>
+              <span class="loading-spinner"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <h3 class="footer-title">Gela's Sweet Bites</h3>
+        <p class="footer-tagline">Baking smiles, one bite at a time. Handcrafted in Antipolo City since 2020.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/gelassweetbites/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Page">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://www.facebook.com/gelassweetbites/" target="_blank" rel="noopener noreferrer" aria-label="Messenger">
+            <i class="fa-brands fa-facebook-messenger"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-links-group">
+        <h4>Explore</h4>
+        <a href="#hero">Home</a>
+        <a href="#menu">Our Menu</a>
+        <a href="#community">Community Reviews</a>
+        <a href="#inquiry">Custom Orders</a>
+      </div>
+      
+      <div class="footer-contact-info">
+        <h4>Contact & Location</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Near Robinsons Place, Antipolo City, Philippines</p>
+        <p><i class="fa-solid fa-truck"></i> Delivering to Antipolo, Rizal, and Metro Manila</p>
+        <p><i class="fa-solid fa-envelope"></i> gelassweetbites@gmail.com</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Gela's Sweet Bites. All rights reserved. | Crafted with love in Antipolo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Product Detail Modal -->
+  <div id="product-detail-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-product-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content-wrapper">
+      <div class="modal-card">
+        <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+        
+        <div class="modal-grid">
+          <div class="modal-visual">
+            <img src="" alt="" id="modal-product-img" class="modal-img">
+          </div>
+          <div class="modal-details">
+            <span class="modal-product-tag" id="modal-product-tag">Signature</span>
+            <h3 class="modal-product-title" id="modal-product-title">Product Name</h3>
+            <div class="modal-product-price" id="modal-product-price">₱0.00</div>
+            
+            <div class="modal-divider"></div>
+            
+            <p class="modal-product-desc" id="modal-product-desc">Product detailed description goes here...</p>
+            
+            <div class="modal-meta-box">
+              <div class="meta-item">
+                <span class="meta-label">Ingredients:</span>
+                <span class="meta-value" id="modal-product-ingredients">Premium cocoa, fresh butter, flour, sugar.</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Sizing / Portion:</span>
+                <span class="meta-value" id="modal-product-sizing">Serves 6-8 people.</span>
+              </div>
+            </div>
+            
+            <button class="btn btn-primary btn-block" id="modal-order-trigger">
+              <i class="fa-regular fa-envelope"></i> Add to Inquiry Form
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inquiry Success Modal -->
+  <div id="success-modal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content-wrapper">
+      <div class="modal-card success-card">
+        <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+        
+        <div class="success-icon-container">
+          <div class="success-ring"></div>
+          <i class="fa-solid fa-check success-check"></i>
+        </div>
+        
+        <h3 class="success-title">Inquiry Sent Successfully!</h3>
+        <p class="success-subtitle">We have saved your request details. Let's finish ordering!</p>
+        
+        <div class="success-recap">
+          <h4>Your Inquiry Recap:</h4>
+          <p><strong>Name:</strong> <span id="recap-name">Name</span></p>
+          <p><strong>Selection:</strong> <span id="recap-selection">Selection</span></p>
+          <p><strong>Date Needed:</strong> <span id="recap-date">Date</span></p>
+        </div>
+        
+        <div class="success-instructions">
+          <p>To ensure we receive your request immediately and finalize custom designs, please tap the button below to send this recap text to Gela on Facebook Messenger.</p>
+        </div>
+        
+        <div class="success-actions">
+          <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block" id="success-fb-link">
+            <i class="fa-brands fa-facebook-messenger"></i> Open Messenger & Send
+          </a>
+          <button class="btn btn-secondary btn-outline btn-block" id="success-close-btn">
+            Close & Go Back
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
