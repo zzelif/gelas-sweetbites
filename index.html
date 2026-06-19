@@ -10,7 +10,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playball&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playball&display=swap" rel="stylesheet">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -54,9 +54,10 @@
   <section id="hero" class="hero-section">
     <div class="hero-watercolor-bg"></div>
     <div class="container hero-container">
-      <div class="hero-text-content">
+      <div class="hero-text-content scroll-reveal">
+        <div class="interlocking-bg-text">Sweet</div>
         <div class="brand-tagline">Baking smiles, one bite at a time...</div>
-        <h1 class="hero-title">Artisanal Delights <br>Crafted With Love</h1>
+        <h1 class="hero-title" aria-label="Artisanal Delights Crafted With Love" id="hero-stagger-title">Artisanal Delights, <em>Crafted With Love</em></h1>
         <p class="hero-description">
           Treat yourself to our signature custom cakes, giant gooey cookies, rich fudgy brownies, and soft, freshly-baked breads. Proudly home-baked in <strong>Antipolo City</strong> (near Robinsons Place) and delivering sweet moments across Rizal and Metro Manila.
         </p>
@@ -87,14 +88,14 @@
         </div>
       </div>
       
-      <div class="hero-visual">
-        <div class="hero-image-frame">
+      <div class="hero-visual tilt-card">
+        <div class="tilt-inner hero-image-frame">
           <img src="images/bakery_hero.png" alt="Gela's Sweet Bites assortment: custom chocolate cake, brownies, and cookies" class="hero-img">
           <div class="hero-floating-badge badge-top">
             <span class="script-badge">Artisanal</span>
           </div>
           <div class="hero-floating-badge badge-bottom">
-            <span class="bold-badge">₱750 Cakes</span>
+            <span class="bold-badge">Starts at ₱750</span>
           </div>
         </div>
       </div>
@@ -132,46 +133,52 @@
         <!-- Cakes Tab Content -->
         <div class="showcase-grid active" id="tab-cakes">
           <!-- Card 1 -->
-          <div class="product-card" data-product-id="cake-chocolate">
-            <div class="product-img-container">
-              <img src="images/products/chocolate_cake.png" alt="Moist Chocolate Christmas Cake" class="product-img">
+          <div class="product-card scroll-reveal" data-product-id="cake-chocolate">
+            <div class="product-img-container tilt-card">
+              <div class="tilt-inner">
+                <img src="images/products/chocolate_cake.png" alt="Moist Chocolate Custom Cake" class="product-img mask-blob-1">
+              </div>
               <span class="product-tag">Signature</span>
             </div>
             <div class="product-info">
               <h3 class="product-name">Moist Chocolate Custom Cake</h3>
               <p class="product-desc">Decadent 6x3 moist chocolate cake filled with premium chocolate ganache and decorated with beautiful custom piping.</p>
               <div class="product-footer">
-                <span class="product-price">₱750.00</span>
+                <span class="product-price"><small>Starts at</small> ₱750.00</span>
                 <button class="btn btn-primary btn-outline btn-sm view-details-btn">Details</button>
               </div>
             </div>
           </div>
           <!-- Card 2 -->
-          <div class="product-card" data-product-id="cake-mocha">
-            <div class="product-img-container">
-              <img src="images/products/mocha_cake.png" alt="Moist Mocha Christmas Cake" class="product-img">
+          <div class="product-card scroll-reveal" data-product-id="cake-mocha">
+            <div class="product-img-container tilt-card">
+              <div class="tilt-inner">
+                <img src="images/products/mocha_cake.png" alt="Moist Mocha Custom Cake" class="product-img mask-blob-2">
+              </div>
               <span class="product-tag">Signature</span>
             </div>
             <div class="product-info">
               <h3 class="product-name">Moist Mocha Custom Cake</h3>
               <p class="product-desc">Rich 6x3 moist mocha sponge cake with velvety mocha ganache filling, decorated elegantly with festive green piping.</p>
               <div class="product-footer">
-                <span class="product-price">₱750.00</span>
+                <span class="product-price"><small>Starts at</small> ₱750.00</span>
                 <button class="btn btn-primary btn-outline btn-sm view-details-btn">Details</button>
               </div>
             </div>
           </div>
           <!-- Card 3 -->
-          <div class="product-card" data-product-id="cake-strawberry">
-            <div class="product-img-container">
-              <img src="images/bakery_hero.png" alt="Strawberry Shortcake" class="product-img">
+          <div class="product-card scroll-reveal" data-product-id="cake-strawberry">
+            <div class="product-img-container tilt-card">
+              <div class="tilt-inner">
+                <img src="images/bakery_hero.png" alt="Strawberry Shortcake" class="product-img mask-blob-3">
+              </div>
               <span class="product-tag">Premium</span>
             </div>
             <div class="product-info">
               <h3 class="product-name">Classic Strawberry Shortcake</h3>
               <p class="product-desc">Light, fluffy vanilla sponge layered with fresh Benguet strawberries and whipped dairy cream. Subtly sweet.</p>
               <div class="product-footer">
-                <span class="product-price">₱850.00</span>
+                <span class="product-price"><small>Starts at</small> ₱850.00</span>
                 <button class="btn btn-primary btn-outline btn-sm view-details-btn">Details</button>
               </div>
             </div>
@@ -181,9 +188,11 @@
         <!-- Cookies Tab Content -->
         <div class="showcase-grid" id="tab-cookies">
           <!-- Card 1 -->
-          <div class="product-card" data-product-id="cookie-chocochip">
-            <div class="product-img-container">
-              <img src="images/products/gooey_cookies.png" alt="Gooey Chocolate Chip Cookie" class="product-img">
+          <div class="product-card scroll-reveal" data-product-id="cookie-chocochip">
+            <div class="product-img-container tilt-card">
+              <div class="tilt-inner">
+                <img src="images/products/gooey_cookies.png" alt="Gooey Chocolate Chip Cookie" class="product-img mask-blob-4">
+              </div>
               <span class="product-tag">Bestseller</span>
             </div>
             <div class="product-info">
@@ -196,9 +205,11 @@
             </div>
           </div>
           <!-- Card 2 -->
-          <div class="product-card" data-product-id="cookie-redvelvet">
-            <div class="product-img-container">
-              <img src="images/products/gooey_cookies.png" alt="Red Velvet Cream Cheese Cookie" class="product-img">
+          <div class="product-card scroll-reveal" data-product-id="cookie-redvelvet">
+            <div class="product-img-container tilt-card">
+              <div class="tilt-inner">
+                <img src="images/products/gooey_cookies.png" alt="Red Velvet Cream Cheese Cookie" class="product-img mask-blob-1">
+              </div>
               <span class="product-tag">Popular</span>
             </div>
             <div class="product-info">
@@ -211,9 +222,11 @@
             </div>
           </div>
           <!-- Card 3 -->
-          <div class="product-card" data-product-id="cookie-doublechoc">
-            <div class="product-img-container">
-              <img src="images/products/gooey_cookies.png" alt="Double Chocolate Fudge Cookie" class="product-img">
+          <div class="product-card scroll-reveal" data-product-id="cookie-doublechoc">
+            <div class="product-img-container tilt-card">
+              <div class="tilt-inner">
+                <img src="images/products/gooey_cookies.png" alt="Double Chocolate Fudge Cookie" class="product-img mask-blob-2">
+              </div>
             </div>
             <div class="product-info">
               <h3 class="product-name">Double Chocolate Fudge Cookie</h3>
@@ -229,9 +242,11 @@
         <!-- Brownies Tab Content -->
         <div class="showcase-grid" id="tab-brownies">
           <!-- Card 1 -->
-          <div class="product-card" data-product-id="brownie-classic">
-            <div class="product-img-container">
-              <img src="images/products/fudgy_brownies.png" alt="Fudgy Chocolate Brownies" class="product-img">
+          <div class="product-card scroll-reveal" data-product-id="brownie-classic">
+            <div class="product-img-container tilt-card">
+              <div class="tilt-inner">
+                <img src="images/products/fudgy_brownies.png" alt="Fudgy Chocolate Brownies" class="product-img mask-blob-3">
+              </div>
               <span class="product-tag">Bestseller</span>
             </div>
             <div class="product-info">
@@ -244,9 +259,11 @@
             </div>
           </div>
           <!-- Card 2 -->
-          <div class="product-card" data-product-id="brownie-caramel">
-            <div class="product-img-container">
-              <img src="images/products/fudgy_brownies.png" alt="Salted Caramel Brownies" class="product-img">
+          <div class="product-card scroll-reveal" data-product-id="brownie-caramel">
+            <div class="product-img-container tilt-card">
+              <div class="tilt-inner">
+                <img src="images/products/fudgy_brownies.png" alt="Salted Caramel Brownies" class="product-img mask-blob-4">
+              </div>
               <span class="product-tag">Premium</span>
             </div>
             <div class="product-info">
@@ -263,9 +280,11 @@
         <!-- Breads Tab Content -->
         <div class="showcase-grid" id="tab-breads">
           <!-- Card 1 -->
-          <div class="product-card" data-product-id="bread-cinnamon">
-            <div class="product-img-container">
-              <img src="images/products/cinnamon_rolls.png" alt="Soft Cinnamon Rolls" class="product-img">
+          <div class="product-card scroll-reveal" data-product-id="bread-cinnamon">
+            <div class="product-img-container tilt-card">
+              <div class="tilt-inner">
+                <img src="images/products/cinnamon_rolls.png" alt="Soft Cinnamon Rolls" class="product-img mask-blob-1">
+              </div>
               <span class="product-tag">Hot & Fresh</span>
             </div>
             <div class="product-info">
@@ -278,9 +297,11 @@
             </div>
           </div>
           <!-- Card 2 -->
-          <div class="product-card" data-product-id="bread-brioche">
-            <div class="product-img-container">
-              <img src="images/products/cinnamon_rolls.png" alt="Cheesy Brioche Loaf" class="product-img">
+          <div class="product-card scroll-reveal" data-product-id="bread-brioche">
+            <div class="product-img-container tilt-card">
+              <div class="tilt-inner">
+                <img src="images/products/cinnamon_rolls.png" alt="Cheesy Brioche Loaf" class="product-img mask-blob-2">
+              </div>
               <span class="product-tag">Artisanal</span>
             </div>
             <div class="product-info">
@@ -294,6 +315,260 @@
           </div>
         </div>
         
+      </div>
+    </div>
+  </section>
+
+  <!-- Masonry Bento Gallery Section -->
+  <section id="gallery" class="gallery-section scroll-reveal">
+    <div class="gallery-watercolor-bg"></div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tagline">Visual Treat</span>
+        <h2 class="section-title">Gela's Pastry Portfolio</h2>
+        <div class="divider"><i class="fa-solid fa-camera"></i></div>
+      </div>
+      
+      <div class="gallery-bento-grid">
+        <!-- Card 1: Whisking Cream (Product detail -> Lightbox) -->
+        <div class="gallery-card tilt-card span-col-6 span-row-2 bg-espresso text-light scroll-reveal" data-lightbox="true" data-img="images/products/mocha_cake.png" data-title="Whisking Buttercream" data-desc="Making our signature espresso-infused mocha ganache buttercream frosting in our Antipolo kitchen.">
+          <div class="tilt-inner gallery-card-inner">
+            <!-- Facebook Header -->
+            <div class="gallery-card-header">
+              <div class="fb-profile-avatar">G</div>
+              <div class="fb-profile-info">
+                <span class="fb-profile-name">Gela's Sweet Bites</span>
+                <span class="fb-post-time">Yesterday at 2:15 PM · Antipolo, Rizal · <i class="fa-solid fa-globe"></i></span>
+              </div>
+              <div class="fb-logo-badge"><i class="fa-brands fa-facebook-f"></i></div>
+            </div>
+            <!-- Body content -->
+            <div class="gallery-card-content split-layout">
+              <div class="gallery-text-area">
+                <span class="gallery-category-badge text-gold">#BehindTheScenes</span>
+                <p class="gallery-post-caption">Whipping up our signature espresso-infused mocha ganache frosting! 🎂☕ Baked fresh in our Antipolo home kitchen near Robinsons Place.</p>
+              </div>
+              <div class="gallery-visual-area">
+                <img src="images/products/mocha_cake.png" alt="Whisking Buttercream" class="gallery-img mask-blob-1 dynamic-blob">
+                <div class="gallery-zoom-indicator">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 2: Cookie Batch (Product detail -> Lightbox) -->
+        <div class="gallery-card tilt-card span-col-3 span-row-2 bg-rose-light scroll-reveal" data-lightbox="true" data-img="images/products/gooey_cookies.png" data-title="Fresh Out of Oven" data-desc="A warm batch of giant gooey chocolate chip cookies baked fresh daily near Robinsons Place. Starts at ₱80.00 / pc.">
+          <div class="tilt-inner gallery-card-inner">
+            <!-- Facebook Header -->
+            <div class="gallery-card-header">
+              <div class="fb-profile-avatar">G</div>
+              <div class="fb-profile-info">
+                <span class="fb-profile-name">Gela's Sweet Bites</span>
+                <span class="fb-post-time">3 hrs ago · Antipolo · <i class="fa-solid fa-globe"></i></span>
+              </div>
+              <div class="fb-logo-badge"><i class="fa-brands fa-facebook-f"></i></div>
+            </div>
+            <!-- Body content -->
+            <div class="gallery-card-content stack-layout">
+              <div class="gallery-visual-area">
+                <img src="images/products/gooey_cookies.png" alt="Fresh Out of Oven" class="gallery-img mask-blob-2 dynamic-blob">
+                <div class="gallery-zoom-indicator">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+              <div class="gallery-text-area">
+                <span class="gallery-category-badge">#HotAndFresh</span>
+                <p class="gallery-post-caption">Fresh cookies straight out of the oven! 🍪 Warm, gooey, and packed with molten dark chocolate pools. Grab yours now! ✨</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 3: Premium Cocoa (Product detail -> Lightbox) -->
+        <div class="gallery-card tilt-card span-col-3 span-row-2 bg-cream scroll-reveal" data-lightbox="true" data-img="images/products/fudgy_brownies.png" data-title="Premium Ingredients" data-desc="Sifting local cocoa and butter caramel to bake Gela's classic fudgy crinkle-top brownies. Starts at ₱350.00 / box.">
+          <div class="tilt-inner gallery-card-inner">
+            <!-- Facebook Header -->
+            <div class="gallery-card-header">
+              <div class="fb-profile-avatar">G</div>
+              <div class="fb-profile-info">
+                <span class="fb-profile-name">Gela's Sweet Bites</span>
+                <span class="fb-post-time">1 day ago · <i class="fa-solid fa-globe"></i></span>
+              </div>
+              <div class="fb-logo-badge"><i class="fa-brands fa-facebook-f"></i></div>
+            </div>
+            <!-- Body content -->
+            <div class="gallery-card-content stack-layout">
+              <div class="gallery-visual-area">
+                <img src="images/products/fudgy_brownies.png" alt="Premium Ingredients" class="gallery-img mask-blob-3 dynamic-blob">
+                <div class="gallery-zoom-indicator">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+              <div class="gallery-text-area">
+                <span class="gallery-category-badge">#Ingredients</span>
+                <p class="gallery-post-caption">Sifting premium local cocoa tablea and butter to create our signature fudgy crinkle-top brownies. Only the best ingredients! 🍫</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 4: Daily Flour (Decorative -> No Lightbox) -->
+        <div class="gallery-card tilt-card span-col-3 span-row-2 bg-sage scroll-reveal">
+          <div class="tilt-inner gallery-card-inner">
+            <!-- Facebook Header -->
+            <div class="gallery-card-header">
+              <div class="fb-profile-avatar">G</div>
+              <div class="fb-profile-info">
+                <span class="fb-profile-name">Gela's Sweet Bites</span>
+                <span class="fb-post-time">2 days ago · <i class="fa-solid fa-globe"></i></span>
+              </div>
+              <div class="fb-logo-badge"><i class="fa-brands fa-facebook-f"></i></div>
+            </div>
+            <!-- Body content -->
+            <div class="gallery-card-content stack-layout">
+              <div class="gallery-visual-area">
+                <img src="images/products/cinnamon_rolls.png" alt="Daily Baking Prep" class="gallery-img mask-blob-4 dynamic-blob">
+              </div>
+              <div class="gallery-text-area">
+                <span class="gallery-category-badge">#DailyBaking</span>
+                <p class="gallery-post-caption">Routine flour sifting and yeast prep for our daily batch of soft brioche and glazed cinnamon rolls. Kneaded with love! 🥖</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 5: Cake Piping (Product detail -> Lightbox) -->
+        <div class="gallery-card tilt-card span-col-3 span-row-2 bg-gold-tint scroll-reveal" data-lightbox="true" data-img="images/products/chocolate_cake.png" data-title="Artisanal Decorating" data-desc="Carefully piping custom designs and message lettering onto Gela's moist chocolate custom cakes. Starts at ₱750.00.">
+          <div class="tilt-inner gallery-card-inner">
+            <!-- Facebook Header -->
+            <div class="gallery-card-header">
+              <div class="fb-profile-avatar">G</div>
+              <div class="fb-profile-info">
+                <span class="fb-profile-name">Gela's Sweet Bites</span>
+                <span class="fb-post-time">4 hrs ago · Antipolo · <i class="fa-solid fa-globe"></i></span>
+              </div>
+              <div class="fb-logo-badge"><i class="fa-brands fa-facebook-f"></i></div>
+            </div>
+            <!-- Body content -->
+            <div class="gallery-card-content stack-layout">
+              <div class="gallery-visual-area">
+                <img src="images/products/chocolate_cake.png" alt="Artisanal Decorating" class="gallery-img mask-blob-2 dynamic-blob">
+                <div class="gallery-zoom-indicator">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+              <div class="gallery-text-area">
+                <span class="gallery-category-badge text-gold">#CakeArtistry</span>
+                <p class="gallery-post-caption">Carefully piping custom designs and message lettering onto Gela's moist chocolate custom cakes. Sweet details! 🎂</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 6: Kitchen Space (Decorative -> No Lightbox) -->
+        <div class="gallery-card tilt-card span-col-6 span-row-2 bg-espresso text-light scroll-reveal">
+          <div class="tilt-inner gallery-card-inner">
+            <!-- Facebook Header -->
+            <div class="gallery-card-header">
+              <div class="fb-profile-avatar">G</div>
+              <div class="fb-profile-info">
+                <span class="fb-profile-name">Gela's Sweet Bites</span>
+                <span class="fb-post-time">June 15 at 10:30 AM · <i class="fa-solid fa-globe"></i></span>
+              </div>
+              <div class="fb-logo-badge"><i class="fa-brands fa-facebook-f"></i></div>
+            </div>
+            <!-- Body content -->
+            <div class="gallery-card-content split-layout">
+              <div class="gallery-text-area">
+                <span class="gallery-category-badge text-gold">#AntipoloKitchen</span>
+                <p class="gallery-post-caption">Step into our cozy home kitchen in Antipolo, Rizal! 📍 Warm sweet aromas, fresh ingredients, and love baked into every single bite.</p>
+              </div>
+              <div class="gallery-visual-area">
+                <img src="images/bakery_hero.png" alt="Antipolo Home Kitchen" class="gallery-img mask-blob-1 dynamic-blob">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 7: Strawberry Shortcake (Product detail -> Lightbox) -->
+        <div class="gallery-card tilt-card span-col-3 span-row-2 bg-rose-light scroll-reveal" data-lightbox="true" data-img="images/bakery_hero.png" data-title="Benguet Strawberry Season" data-desc="Layering fresh sweet strawberries with rich whipped cream for Gela's premium shortcake. Starts at ₱850.00.">
+          <div class="tilt-inner gallery-card-inner">
+            <!-- Facebook Header -->
+            <div class="gallery-card-header">
+              <div class="fb-profile-avatar">G</div>
+              <div class="fb-profile-info">
+                <span class="fb-profile-name">Gela's Sweet Bites</span>
+                <span class="fb-post-time">June 14 · <i class="fa-solid fa-globe"></i></span>
+              </div>
+              <div class="fb-logo-badge"><i class="fa-brands fa-facebook-f"></i></div>
+            </div>
+            <!-- Body content -->
+            <div class="gallery-card-content stack-layout">
+              <div class="gallery-visual-area">
+                <img src="images/bakery_hero.png" alt="Strawberry Shortcake Layering" class="gallery-img mask-blob-3 dynamic-blob">
+                <div class="gallery-zoom-indicator">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+              <div class="gallery-text-area">
+                <span class="gallery-category-badge">#FruitPrep</span>
+                <p class="gallery-post-caption">Slicing fresh sweet Benguet strawberries to layer with whipped dairy cream. Classic strawberry shortcake season! 🍓</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 8: Packaging (Decorative -> No Lightbox) -->
+        <div class="gallery-card tilt-card span-col-3 span-row-2 bg-cream scroll-reveal">
+          <div class="tilt-inner gallery-card-inner">
+            <!-- Facebook Header -->
+            <div class="gallery-card-header">
+              <div class="fb-profile-avatar">G</div>
+              <div class="fb-profile-info">
+                <span class="fb-profile-name">Gela's Sweet Bites</span>
+                <span class="fb-post-time">June 12 · <i class="fa-solid fa-globe"></i></span>
+              </div>
+              <div class="fb-logo-badge"><i class="fa-brands fa-facebook-f"></i></div>
+            </div>
+            <!-- Body content -->
+            <div class="gallery-card-content stack-layout">
+              <div class="gallery-visual-area">
+                <img src="images/products/fudgy_brownies.png" alt="Sweet Bites Packaging" class="gallery-img mask-blob-4 dynamic-blob">
+              </div>
+              <div class="gallery-text-area">
+                <span class="gallery-category-badge">#PastryCuration</span>
+                <p class="gallery-post-caption">Tying the final pink ribbons on our pastry boxes! 🎀 Each order is carefully packaged to make your sweet gifts extra special.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 9: Fresh Breads (Decorative -> No Lightbox) -->
+        <div class="gallery-card tilt-card span-col-6 span-row-2 bg-sage scroll-reveal">
+          <div class="tilt-inner gallery-card-inner">
+            <!-- Facebook Header -->
+            <div class="gallery-card-header">
+              <div class="fb-profile-avatar">G</div>
+              <div class="fb-profile-info">
+                <span class="fb-profile-name">Gela's Sweet Bites</span>
+                <span class="fb-post-time">June 10 · <i class="fa-solid fa-globe"></i></span>
+              </div>
+              <div class="fb-logo-badge"><i class="fa-brands fa-facebook-f"></i></div>
+            </div>
+            <!-- Body content -->
+            <div class="gallery-card-content split-layout">
+              <div class="gallery-text-area">
+                <span class="gallery-category-badge">#OvenFresh</span>
+                <p class="gallery-post-caption">Watching our buttery brioche and soft cinnamon rolls rise before baking. Golden-brown goodness incoming! 🍞</p>
+              </div>
+              <div class="gallery-visual-area">
+                <img src="images/products/cinnamon_rolls.png" alt="Fresh Breads rising" class="gallery-img mask-blob-1 dynamic-blob">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -404,12 +679,16 @@
     <div class="container">
       <div class="inquiry-grid">
         <!-- Text details -->
-        <div class="inquiry-details">
+        <div class="inquiry-details scroll-reveal">
           <span class="section-tagline">Handcrafted for You</span>
           <h2 class="section-title">Request a Custom Creation</h2>
           <p class="inquiry-intro-text">
             Planning a birthday, anniversary, or a special holiday gathering? Gela customizes cakes, cupcakes, and bulk boxes of cookies and brownies to fit your theme.
           </p>
+          <div class="inquiry-advisory-note">
+            <i class="fa-solid fa-circle-info"></i>
+            <span><strong>Note on Pricing:</strong> Custom cake pricing varies depending on size, flavor, and decoration complexity. Flat rates apply for cookies, brownies, rolls, and breads. Final pricing will be discussed and finalized in chat.</span>
+          </div>
           
           <ul class="inquiry-bullets">
             <li>
@@ -442,20 +721,20 @@
         </div>
         
         <!-- Form -->
-        <div class="inquiry-card">
+        <div class="inquiry-card scroll-reveal">
           <h3 class="form-card-title">Send Order Inquiry</h3>
           <p class="form-card-subtitle">Fill in your request and we'll connect with you on Facebook or Email.</p>
           
           <form id="order-inquiry-form" novalidate>
             <div class="form-row">
               <div class="form-group">
-                <label for="user-name">Your Full Name*</label>
-                <input type="text" id="user-name" name="name" placeholder="Juan dela Cruz" required>
+                <label for="user-name">Your Full Name *</label>
+                <input type="text" id="user-name" name="name" placeholder="Juan Dela Cruz" required>
                 <span class="error-msg">Please enter your name.</span>
               </div>
               
               <div class="form-group">
-                <label for="user-fb">Facebook Profile Name/Link*</label>
+                <label for="user-fb">Facebook Profile Name/Link *</label>
                 <input type="text" id="user-fb" name="facebook" placeholder="fb.com/username or Profile Name" required>
                 <span class="error-msg">We need this to contact you on Facebook.</span>
               </div>
@@ -469,7 +748,7 @@
               </div>
               
               <div class="form-group">
-                <label for="user-phone">Phone Number*</label>
+                <label for="user-phone">Phone Number *</label>
                 <input type="tel" id="user-phone" name="phone" placeholder="0917XXXXXXX" required>
                 <span class="error-msg">Please enter a valid mobile number.</span>
               </div>
@@ -477,12 +756,12 @@
             
             <div class="form-row">
               <div class="form-group">
-                <label for="order-selection">Sweet Selection*</label>
+                <label for="order-selection">Sweet Selection *</label>
                 <select id="order-selection" name="selection" required>
                   <option value="" disabled selected>-- Select a creation --</option>
-                  <option value="Moist Chocolate Custom Cake">Moist Chocolate Custom Cake (₱750.00)</option>
-                  <option value="Moist Mocha Custom Cake">Moist Mocha Custom Cake (₱750.00)</option>
-                  <option value="Classic Strawberry Shortcake">Classic Strawberry Shortcake (₱850.00)</option>
+                  <option value="Moist Chocolate Custom Cake">Moist Chocolate Custom Cake (Starts at ₱750.00)</option>
+                  <option value="Moist Mocha Custom Cake">Moist Mocha Custom Cake (Starts at ₱750.00)</option>
+                  <option value="Classic Strawberry Shortcake">Classic Strawberry Shortcake (Starts at ₱850.00)</option>
                   <option value="Gooey Cookies Selection">Gooey Cookies (Box order)</option>
                   <option value="Fudgy Brownies Selection">Fudgy Brownies (Box order)</option>
                   <option value="Artisanal Breads Selection">Artisanal Breads</option>
@@ -492,14 +771,14 @@
               </div>
               
               <div class="form-group">
-                <label for="order-date">Date Needed*</label>
+                <label for="order-date">Date Needed *</label>
                 <input type="date" id="order-date" name="date" required>
                 <span class="error-msg">Please select a delivery/pickup date.</span>
               </div>
             </div>
             
             <div class="form-group">
-              <label for="order-details">Customization Details (Flavors, design, lettering, or quantity)*</label>
+              <label for="order-details">Customization Details (Flavors, design, lettering, or quantity) *</label>
               <textarea id="order-details" name="details" rows="4" placeholder="Describe your request: e.g. Lettering: 'Happy Birthday Mom!', delivery to Cainta, or custom cookie quantities..." required></textarea>
               <span class="error-msg">Please share details of your order.</span>
             </div>
@@ -626,6 +905,21 @@
           <button class="btn btn-secondary btn-outline btn-block" id="success-close-btn">
             Close & Go Back
           </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div id="lightbox-modal" class="modal lightbox-modal" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="lightbox-content-wrapper">
+      <button class="lightbox-close-btn" aria-label="Close lightbox"><i class="fa-solid fa-xmark"></i></button>
+      <div class="lightbox-container">
+        <img src="" alt="" id="lightbox-img" class="lightbox-img">
+        <div class="lightbox-caption">
+          <h3 id="lightbox-title">Image Title</h3>
+          <p id="lightbox-desc">Image Description</p>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@
 const productData = {
   'cake-chocolate': {
     title: 'Moist Chocolate Custom Cake',
-    price: '₱750.00',
+    price: 'Starts at ₱750.00',
     desc: 'Our bestselling decadent 6x3 moist chocolate cake is baked with rich premium cocoa, layered with luscious chocolate ganache filling, and finished with elegant, festive piping. The perfect center-piece for any holiday or celebration.',
     tag: 'Signature',
     ingredients: 'Premium local cocoa, high-grade dark chocolate, fresh butter, refined flour, cane sugar, farm eggs, chocolate ganache filling.',
@@ -18,7 +18,7 @@ const productData = {
   },
   'cake-mocha': {
     title: 'Moist Mocha Custom Cake',
-    price: '₱750.00',
+    price: 'Starts at ₱750.00',
     desc: 'An exquisite 6x3 moist mocha cake featuring a light and airy espresso-infused sponge, layered with velvety mocha ganache, and decorated with a beautiful green buttercream piping border. Rich, creamy, and subtly bittersweet.',
     tag: 'Signature',
     ingredients: 'Espresso coffee infusion, local cocoa powder, dairy buttercream, wheat flour, organic sugar, fresh eggs.',
@@ -28,7 +28,7 @@ const productData = {
   },
   'cake-strawberry': {
     title: 'Classic Strawberry Shortcake',
-    price: '₱850.00',
+    price: 'Starts at ₱850.00',
     desc: 'A light and luxurious vanilla sponge cake layered with fresh Benguet strawberries and sweet whipped dairy cream. It offers a clean, fruity, and delicately balanced sweetness.',
     tag: 'Premium',
     ingredients: 'Fresh Benguet strawberries, dairy whipped cream, organic vanilla bean, soft pastry flour, eggs, sugar.',
@@ -437,3 +437,237 @@ Looking forward to finalizing my order! Thank you!`;
 
 // Success Close trigger
 document.getElementById('success-close-btn').addEventListener('click', closeAllModals);
+
+// ==========================================================================
+// 6. Advanced Interactive Motion Refinements (Lightweight & Accessible)
+// ==========================================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+  
+  // 6.1. Staggered H1 Character Reveal (a11y Compliant)
+  const staggerTitle = document.getElementById('hero-stagger-title');
+  if (staggerTitle) {
+    staggerTitle.setAttribute('aria-label', staggerTitle.textContent);
+
+    const originalNodes = Array.from(staggerTitle.childNodes);
+    staggerTitle.innerHTML = ''; // Clear contents
+    
+    let delay = 0;
+    
+    // Process each node type individually
+    originalNodes.forEach(node => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        // Handle standard text segments
+        processTextSegments(node.textContent, staggerTitle);
+      } else if (node.nodeName === 'EM') {
+        // Create a new EM element to preserve your CSS target
+        const emClone = document.createElement('em');
+        staggerTitle.appendChild(emClone);
+        processTextSegments(node.textContent, emClone);
+      }
+    });
+    
+    function processTextSegments(text, container) {
+      const words = text.split(/(\s+)/);
+      
+      words.forEach(word => {
+        if (/\s+/.test(word)) {
+          if (word.includes('\n')) {
+            container.appendChild(document.createElement('br'));
+          } else {
+            container.appendChild(document.createTextNode(' '));
+          }
+        } else {
+          const wordSpan = document.createElement('span');
+          wordSpan.style.display = 'inline-block';
+          wordSpan.style.whiteSpace = 'nowrap';
+          
+          for (let i = 0; i < word.length; i++) {
+            const charSpan = document.createElement('span');
+            charSpan.textContent = word[i];
+            charSpan.className = 'stagger-letter';
+            charSpan.setAttribute('aria-hidden', 'true');
+            charSpan.style.setProperty('--delay', `${delay}ms`);
+            wordSpan.appendChild(charSpan);
+            delay += 40; 
+          }
+          container.appendChild(wordSpan);
+        }
+      });
+    }
+  }
+
+  // 6.2. Throttled & Cached 3D Mouse Tilt & Liquid Morphing Mechanics (Continuous Ticker)
+  const tiltCards = document.querySelectorAll('.tilt-card');
+  tiltCards.forEach(card => {
+    const inner = card.querySelector('.tilt-inner');
+    if (!inner) return;
+    
+    // Find the blob image inside this card if one exists
+    const blob = card.querySelector('.dynamic-blob, .product-img');
+    
+    let bounds = null;
+    let rAFId = null;
+    let isHovered = false;
+    let mouseX = 0;
+    let mouseY = 0;
+    
+    const updateBounds = () => {
+      bounds = card.getBoundingClientRect();
+    };
+    
+    // Continuous rendering ticker loop on hover
+    const tick = () => {
+      if (!isHovered) return;
+      
+      const w = bounds ? bounds.width : 200;
+      const h = bounds ? bounds.height : 200;
+      
+      // Calculate rotation offset percentage (-0.5 to 0.5)
+      const xPct = bounds ? (mouseX / w - 0.5) : 0;
+      const yPct = bounds ? (mouseY / h - 0.5) : 0;
+      
+      // Limit tilt to 12 degrees max
+      const rotX = -yPct * 12;
+      const rotY = xPct * 12;
+      
+      // Time-based continuous waves for organic sloshing effect
+      const time = Date.now() * 0.003;
+      const waveX = Math.sin(time) * 6; // 6% wave amplitude
+      const waveY = Math.cos(time) * 6;
+      
+      let borderRadiusValue = '';
+      if (blob) {
+        const x = xPct + 0.5;
+        const y = yPct + 0.5;
+        
+        // Base value (~45%) + Mouse direction bias (~25%) + Gentle wave ripple (~6%)
+        const tlX = Math.round(35 + y * 25 + waveX);
+        const trX = Math.round(65 - y * 25 - waveX);
+        const brX = Math.round(55 + x * 25 + waveY);
+        const blX = Math.round(45 - x * 25 - waveY);
+        
+        const tlY = Math.round(45 + x * 25 - waveY);
+        const trY = Math.round(55 - x * 25 + waveY);
+        const brY = Math.round(45 + y * 25 - waveX);
+        const blY = Math.round(55 - y * 25 + waveX);
+        
+        borderRadiusValue = `${tlX}% ${trX}% ${brX}% ${blX}% / ${tlY}% ${trY}% ${brY}% ${blY}%`;
+      }
+      
+      // Apply transforms
+      inner.style.setProperty('--rx', `${rotX.toFixed(2)}deg`);
+      inner.style.setProperty('--ry', `${rotY.toFixed(2)}deg`);
+      
+      if (blob) {
+        if (borderRadiusValue) {
+          blob.style.borderRadius = borderRadiusValue;
+        }
+        // Parallax sloshing shift: translate the blob image slightly toward the mouse
+        const shiftX = (xPct * 20).toFixed(1);
+        const shiftY = (yPct * 20).toFixed(1);
+        blob.style.transform = `translate3d(${shiftX}px, ${shiftY}px, 30px) scale(1.15)`;
+      }
+      
+      rAFId = requestAnimationFrame(tick);
+    };
+    
+    // Cache dimensions on enter, avoiding getBoundingClientRect on mousemove
+    card.addEventListener('mouseenter', () => {
+      isHovered = true;
+      updateBounds();
+      if (blob) {
+        // Use a fast spring transition for active mouse follow morphs
+        blob.style.transition = 'border-radius 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1)';
+      }
+      tick();
+    });
+    
+    window.addEventListener('resize', () => {
+      if (bounds) updateBounds();
+    });
+    
+    card.addEventListener('mousemove', (e) => {
+      if (!bounds) updateBounds();
+      mouseX = e.clientX - bounds.left;
+      mouseY = e.clientY - bounds.top;
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      isHovered = false;
+      if (rAFId) cancelAnimationFrame(rAFId);
+      
+      rAFId = requestAnimationFrame(() => {
+        inner.style.setProperty('--rx', '0deg');
+        inner.style.setProperty('--ry', '0deg');
+        if (blob) {
+          blob.style.borderRadius = ''; // Let CSS transition back over 1s
+          blob.style.transform = ''; // Slide back to center over 0.4s
+          blob.style.transition = ''; // Restore default CSS transitions
+        }
+      });
+      bounds = null; // Reset bounds cache
+    });
+  });
+
+  // 6.3. IntersectionObserver scroll reveals
+  const revealElements = document.querySelectorAll('.scroll-reveal');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target); // Trigger once
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  });
+  
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // 6.4. Image Lightbox Modal Logic
+  const lightboxModal = document.getElementById('lightbox-modal');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxTitle = document.getElementById('lightbox-title');
+  const lightboxDesc = document.getElementById('lightbox-desc');
+  const lightboxCloseBtn = document.querySelector('.lightbox-close-btn');
+  const lightboxTriggerCards = document.querySelectorAll('[data-lightbox="true"]');
+  
+  lightboxTriggerCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.stopPropagation();
+      
+      const imgSrc = card.getAttribute('data-img');
+      const imgTitle = card.getAttribute('data-title');
+      const imgDesc = card.getAttribute('data-desc');
+      
+      if (imgSrc) {
+        lightboxImg.src = imgSrc;
+        lightboxImg.alt = imgTitle || 'Pastry image';
+        lightboxTitle.textContent = imgTitle || '';
+        lightboxDesc.textContent = imgDesc || '';
+        
+        lightboxModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+  
+  if (lightboxCloseBtn) {
+    lightboxCloseBtn.addEventListener('click', () => {
+      lightboxModal.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  }
+  
+  if (lightboxModal) {
+    const backdrop = lightboxModal.querySelector('.modal-backdrop');
+    if (backdrop) {
+      backdrop.addEventListener('click', () => {
+        lightboxModal.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    }
+  }
+});
